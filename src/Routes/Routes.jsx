@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
 import HomeLayout from "../Layout/HomeLayout";
+import Brand from "../components/Brand/Brand";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/brands",
-        element: <h1>Hello brands</h1>
+        element: <Brand></Brand>,
+        loader: () => fetch("/coupon.json")
       }
     ],
   },

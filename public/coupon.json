@@ -3,8 +3,8 @@
     "_id": "1",
     "brand_name": "Daraz Bangladesh",
     "rating": 4.5,
-    "description": "Leading online shopping platform in Bangladesh offering a wide range of products.",
-    "brand_logo": "https://example.com/daraz_logo.png",
+    "description": "One of the largest e-commerce platforms in South Asia, Daraz offers a vast range of products, including electronics, fashion, home appliances, and more. Known for its user-friendly interface and regular promotions, it provides fast delivery and secure payment options, making online shopping accessible to millions.",
+    "brand_logo": "https://i.ibb.co.com/4mQp5rK/800px-Daraz-Logo.png",
     "coupons": [
       {
         "coupon_code": "DARAZ50",
@@ -22,15 +22,15 @@
       }
     ],
     "shop_Link": "https://www.daraz.com.bd/",
-    "category": "Electronics, Fashion, Home & Living",
+    "category": "Fashion, Home & Living",
     "isSaleOn": true
   },
   {
     "_id": "2",
     "brand_name": "Chaldal",
     "rating": 4.2,
-    "description": "Convenient online grocery delivery service in Dhaka.",
-    "brand_logo": "https://example.com/chaldal_logo.png",
+    "description": "A pioneer in online grocery shopping in Bangladesh, Chaldal delivers fresh fruits, vegetables, meat, and daily essentials directly to your doorstep. With a focus on convenience and quality, it caters to busy urban lifestyles, offering same-day delivery and affordable prices.",
+    "brand_logo": "https://i.ibb.co.com/SXzSYm5/Chaldal-Brand-ID-2021.png",
     "coupons": [
       {
         "coupon_code": "CHALDALSAVE",
@@ -49,7 +49,7 @@
     "brand_name": "AjkerDeal",
     "rating": 4.0,
     "description": "Online shopping platform offering daily deals and discounts.",
-    "brand_logo": "https://example.com/ajkerdeal_logo.png",
+    "brand_logo": "https://i.ibb.co.com/0Yg7Q4Q/pseo-HC0hf2ff-Dcde-Nlojvrr0j-TQKxrz-1-Uo-U10-FQHmm-Nw-Gg-Vwnx-VBZTUK4x2cewv-MBg.png",
     "coupons": [
       {
         "coupon_code": "AJKER20",
@@ -68,7 +68,7 @@
     "brand_name": "StarTech",
     "rating": 4.3,
     "description": "A leading Bangladeshi e-commerce store specializing in computers, accessories, and IT products.",
-    "brand_logo": "https://example.com/startech_logo.png",
+    "brand_logo": "https://i.ibb.co.com/nCGBbh3/startech-logo-0-BF29-AE753-seeklogo-com.png",
     "coupons": [
       {
         "coupon_code": "STARTECH500",
@@ -79,7 +79,7 @@
       }
     ],
     "shop_Link": "https://www.startech.com.bd/",
-    "category": "Electronics, Computers, IT Accessories",
+    "category": "Electronics, IT Accessories",
     "isSaleOn": true
   },
   {
@@ -87,7 +87,7 @@
     "brand_name": "Aroggo",
     "rating": 4.5,
     "description": "Online platform for health and wellness products.",
-    "brand_logo": "https://example.com/aroggo_logo.png",
+    "brand_logo": "https://i.ibb.co.com/NjQfKVw/logo-green-af18cf83.png",
     "coupons": [
       {
         "coupon_code": "AROGGO10",
@@ -106,7 +106,7 @@
     "brand_name": "Rokomari",
     "rating": 4.8,
     "description": "Bangladesh's leading online bookstore for books, eBooks, and educational materials.",
-    "brand_logo": "https://example.com/rokomari_logo.png",
+    "brand_logo": "https://i.ibb.co.com/sJtgQFM/181544.png",
     "coupons": [
       {
         "coupon_code": "BOOKS100",
@@ -125,7 +125,7 @@
     "brand_name": "Foodpanda",
     "rating": 4.6,
     "description": "Leading online food delivery service in Bangladesh.",
-    "brand_logo": "https://example.com/foodpanda_logo.png",
+    "brand_logo": "https://i.ibb.co.com/LtnsDz7/foodpanda-logo-RGB-horizontal.webp",
     "coupons": [
       {
         "coupon_code": "FOODPANDFREE",
@@ -144,7 +144,7 @@
     "brand_name": "Motionview",
     "rating": 4.4,
     "description": "Specialized in electronic devices and gadgets with an emphasis on cameras and photography equipment.",
-    "brand_logo": "https://example.com/motionview_logo.png",
+    "brand_logo": "https://i.ibb.co.com/vX0j7SV/615187ac49391-Logo-Amdadul-Hoque.png",
     "coupons": [
       {
         "coupon_code": "MOTIONVIEW1000",

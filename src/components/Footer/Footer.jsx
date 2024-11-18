@@ -1,80 +1,83 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import footerImage from "../../assets/logo.png";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-primary text-white p-6">
-        <div className="w-11/12 mx-auto md:w-10/12 max-w-screen-2xl flex flex-col justify-start md:flex-row md:justify-between items-center">
-          {/* Project info */}
-          <div className="text-center md:text-left mb-4 md:mb-0 md:w-4/12">
-            <h2 className="text-2xl font-bold mb-4">Toto-Coupon</h2>
-            <p className="text-sm">
-              ToTo-Coupon is a simple platform that helps users in Bangladesh
-              find the best discount coupons for top e-commerce stores. Easily
-              browse and copy coupon codes to save money on a variety of
-              products with just a click. Sign up using email or Google for
-              quick access to the latest deals!!
-            </p>
+      <footer className="py-12 bg-primary w-full">
+        <div>
+          <img className="mx-auto h-44 w-fit" src={footerImage} alt="" />
+        </div>
+        <footer>
+          <div className="space-y-8 md:flex gap-12 flex-wrap md:space-y-0 justify-between text-white py-10 px-4 mx-auto w-11/12 md:w-10/12 max-w-screen-2xl ">
+            <nav>
+              <div className="flex space-x-3 items-center">
+                <img src={footerImage} alt="" className="w-12" />
+                <h1 className="text-3xl font-bold">
+                  <a href="index.html">Toto-Coupon</a>
+                </h1>
+              </div>
+              <div className="space-y-3 mt-4 text-white max-w-sm">
+                <p>
+                  ToTo-Coupon is a simple platform that helps users in
+                  Bangladesh find the best discount coupons for top e-commerce
+                  stores. Easily browse and copy coupon codes to save money on a
+                  variety of products with just a click. Sign up using email or
+                  Google for quick access to the latest deals!!
+                </p>
+              </div>
+            </nav>
+            <div className="flex justify-between gap-12 flex-wrap">
+              <nav className="space-y-3">
+                <h6 className="text-2xl font-bold">Quick Links</h6>
+                <li className="list-none text-white">Home</li>
+                <li className="list-none text-white">About us</li>
+                <li className="list-none text-white">Service</li>
+                <li className="list-none text-white">Contact</li>
+              </nav>
+              <nav className="space-y-3">
+                <h6 className="text-2xl font-bold">Legal</h6>
+                <li className="list-none text-white">Terms of Service</li>
+                <li className="list-none text-white">Privacy Policy</li>
+                <li className="list-none text-white">Cookie Policy</li>
+                <li className="list-none text-white">FAQ</li>
+              </nav>
+            </div>
+            <div>
+              <h6 className="text-2xl font-bold">Subscribe</h6>
+              <p className="space-y-3 mt-4 text-white">
+                Subscribe to our newsletter for the <br /> latest Coupons
+                updates.
+              </p>
+              <fieldset className="hidden sm:block form-control w-80 mt-4">
+                <div className="join">
+                  <input
+                    type="text"
+                    placeholder="Enter your email"
+                    className="input input-bordered join-item border-4 border-white text-black
+                    "
+                  />
+                  <button className="px-4 font-semibold text-white btn rounded-r-xl rounded-l-none bg-primary border-2">
+                    Subscribe
+                  </button>
+                </div>
+              </fieldset>
+              <fieldset className=" sm:hidden form-control mt-4">
+                <div className="flex flex-col join join-vertical">
+                  <input
+                    type="text"
+                    placeholder="Enter your email"
+                    className="input input-bordered join-item border-4 border-white text-black"
+                  />
+                  <button className="px-4 py-3 join-item font-semibold text-white btn rounded-xl bg-primary border-2">
+                    Subscribe
+                  </button>
+                </div>
+              </fieldset>
+            </div>
           </div>
-
-          {/* Links section */}
-          <div className="md:w-4/12 flex flex-col md:flex-row md:justify-between">
-            <ul className="text-sm space-y-2">
-              <li>
-                <a href="/" className="hover:text-gray-300">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="hover:text-gray-300">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="hover:text-gray-300">
-                  Contact
-                </a>
-              </li>
-            </ul>
-            <ul className="text-sm space-y-2">
-              <li>
-                <a href="/terms" className="hover:text-gray-300">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="/privacy" className="hover:text-gray-300">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="/faq" className="hover:text-gray-300">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-            <ul className="text-sm space-y-2">
-              <li>
-                <a href="/terms" className="hover:text-gray-300">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="/privacy" className="hover:text-gray-300">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="/faq" className="hover:text-gray-300">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Social media & profile link */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Find Us On</h2>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="pb-10 text-white">
+            <h2 className="text-3xl font-bold mb-4 text-center">Find Us On</h2>
+            <div className="flex justify-center space-x-8 mt-4 md:mt-0">
               <a
                 href="https://www.facebook.com/yourprofile"
                 target="_blank"
@@ -97,7 +100,7 @@ const Footer = () => {
                 <FaInstagram className="text-2xl hover:text-gray-300" />
               </a>
               <a
-                href="https://github.com/yourprofile"
+                href="https://github.com/sheikh-saiyam"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -105,11 +108,11 @@ const Footer = () => {
               </a>
             </div>
           </div>
-        </div>
+        </footer>
 
         {/* Copyright */}
         <hr className="border mt-4 w-11/12 mx-auto md:w-10/12 max-w-screen-2xl  " />
-        <div className="mt-4 text-center text-lg font-bold">
+        <div className="mt-4 text-center text-white text-lg font-bold">
           <p>&copy; 2024 ToTo-Coupon All rights reserved.</p>
         </div>
       </footer>
