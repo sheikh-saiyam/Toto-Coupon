@@ -54,6 +54,24 @@ const TopBrands = () => {
               </div>
             </Link>
             <Link to={"/brands"}>
+              <div className="border p-4 rounded-lg">
+                <img
+                  className="w-48 h-24"
+                  src="https://i.ibb.co.com/0Yg7Q4Q/pseo-HC0hf2ff-Dcde-Nlojvrr0j-TQKxrz-1-Uo-U10-FQHmm-Nw-Gg-Vwnx-VBZTUK4x2cewv-MBg.png"
+                  alt=""
+                />
+              </div>
+            </Link>
+            <Link to={"/brands"}>
+              <div className="border p-4 rounded-lg ">
+                <img
+                  className="w-48 h-24"
+                  src="https://i.ibb.co.com/SXzSYm5/Chaldal-Brand-ID-2021.png"
+                  alt=""
+                />
+              </div>
+            </Link>
+            <Link to={"/brands"}>
               <div className="border p-4 rounded-lg mr-8">
                 <img
                   className="w-48 h-24"

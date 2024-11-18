@@ -19,13 +19,26 @@
         "expiry_date": "2024-11-30",
         "condition": "Valid only in Dhaka city.",
         "coupon_type": "Delivery"
+      },
+      {
+        "coupon_code": "BUY1GET1",
+        "description": "Buy one, get one free on selected items.",
+        "expiry_date": "2024-12-15",
+        "condition": "Applicable on selected products only.",
+        "coupon_type": "Promotion"
+      },
+      {
+        "coupon_code": "SUMMER20",
+        "description": "Enjoy 20% off on summer collections.",
+        "expiry_date": "2024-12-01",
+        "condition": "No minimum purchase required.",
+        "coupon_type": "Percentage"
       }
     ],
     "shop_Link": "https://www.daraz.com.bd/",
     "category": "Fashion, Home & Living",
     "isSaleOn": true
   },
-
   {
     "_id": "4",
     "brand_name": "StarTech",
@@ -38,6 +51,27 @@
         "description": "Get BDT 500 off on your first purchase above BDT 5000.",
         "expiry_date": "2024-12-31",
         "condition": "Minimum purchase of BDT 5000.",
+        "coupon_type": "Flat"
+      },
+      {
+        "coupon_code": "GADGET10",
+        "description": "Enjoy 10% off on gadgets over BDT 3000.",
+        "expiry_date": "2025-01-15",
+        "condition": "Minimum purchase of BDT 3000.",
+        "coupon_type": "Percentage"
+      },
+      {
+        "coupon_code": "FREESHIP2024",
+        "description": "Free shipping on orders above BDT 1500.",
+        "expiry_date": "2024-12-25",
+        "condition": "Applicable for orders above BDT 1500.",
+        "coupon_type": "Free Shipping"
+      },
+      {
+        "coupon_code": "BUYMORE200",
+        "description": "Save BDT 200 when you spend over BDT 2000.",
+        "expiry_date": "2025-02-28",
+        "condition": "Minimum purchase of BDT 2000.",
         "coupon_type": "Flat"
       }
     ],
@@ -58,6 +92,27 @@
         "expiry_date": "2024-11-30",
         "condition": "Valid on selected products.",
         "coupon_type": "Percentage"
+      },
+      {
+        "coupon_code": "FITNESS15",
+        "description": "15% off on all fitness equipment.",
+        "expiry_date": "2024-12-15",
+        "condition": "Applicable on all fitness equipment.",
+        "coupon_type": "Percentage"
+      },
+      {
+        "coupon_code": "SUPPORT5",
+        "description": "Save BDT 5 on health supplements purchase above BDT 500.",
+        "expiry_date": "2024-12-10",
+        "condition": "Valid on purchases over BDT 500.",
+        "coupon_type": "Flat"
+      },
+      {
+        "coupon_code": "HEALTHSHIPFREE",
+        "description": "Free shipping on health-related products above BDT 1000.",
+        "expiry_date": "2024-12-25",
+        "condition": "Valid on health products only, above BDT 1000.",
+        "coupon_type": "Free Shipping"
       }
     ],
     "shop_Link": "https://www.aroggo.com/",
@@ -77,6 +132,27 @@
         "expiry_date": "2024-11-25",
         "condition": "Valid on selected titles.",
         "coupon_type": "Flat"
+      },
+      {
+        "coupon_code": "READMORE15",
+        "description": "15% off on orders of books above BDT 1500.",
+        "expiry_date": "2024-12-10",
+        "condition": "Valid on books over BDT 1500.",
+        "coupon_type": "Percentage"
+      },
+      {
+        "coupon_code": "FREESHIPBOOKS",
+        "description": "Free shipping on book orders above BDT 800.",
+        "expiry_date": "2024-12-05",
+        "condition": "Valid for book orders above BDT 800.",
+        "coupon_type": "Free Shipping"
+      },
+      {
+        "coupon_code": "BOOKBUNDLE20",
+        "description": "20% off on book bundles.",
+        "expiry_date": "2024-12-20",
+        "condition": "Valid on book bundles only.",
+        "coupon_type": "Percentage"
       }
     ],
     "shop_Link": "https://www.rokomari.com/",
@@ -96,6 +172,13 @@
         "expiry_date": "2024-11-20",
         "condition": "Valid on all categories.",
         "coupon_type": "Percentage"
+      },
+      {
+        "coupon_code": "NEWYEAR500",
+        "description": "Get BDT 500 off on your next order above BDT 3000.",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum purchase of BDT 3000.",
+        "coupon_type": "Flat"
       }
     ],
     "shop_Link": "https://www.ajkerdeal.com/",
@@ -115,6 +198,27 @@
         "expiry_date": "2024-12-15",
         "condition": "Only valid for new users.",
         "coupon_type": "Delivery"
+      },
+      {
+        "coupon_code": "FOOD20",
+        "description": "Get 20% off on food orders above BDT 1000.",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum purchase of BDT 1000.",
+        "coupon_type": "Percentage"
+      },
+      {
+        "coupon_code": "SNACKS50",
+        "description": "Save BDT 50 on snacks orders above BDT 500.",
+        "expiry_date": "2024-12-20",
+        "condition": "Valid on snacks orders above BDT 500.",
+        "coupon_type": "Flat"
+      },
+      {
+        "coupon_code": "DRINKSFREE",
+        "description": "Free drink with every order above BDT 700.",
+        "expiry_date": "2024-12-10",
+        "condition": "Valid on orders above BDT 700.",
+        "coupon_type": "Free Item"
       }
     ],
     "shop_Link": "https://www.foodpanda.com.bd/",
@@ -134,6 +238,27 @@
         "expiry_date": "2024-12-10",
         "condition": "Valid on selected cameras.",
         "coupon_type": "Flat"
+      },
+      {
+        "coupon_code": "CAMERA10",
+        "description": "Get 10% off on all camera accessories.",
+        "expiry_date": "2024-12-15",
+        "condition": "Valid on camera accessories only.",
+        "coupon_type": "Percentage"
+      },
+      {
+        "coupon_code": "CAMERADEAL500",
+        "description": "Save BDT 500 on cameras above BDT 5000.",
+        "expiry_date": "2024-12-20",
+        "condition": "Valid on selected cameras.",
+        "coupon_type": "Flat"
+      },
+      {
+        "coupon_code": "CAMERADELIVERY",
+        "description": "Free delivery on camera purchases above BDT 7000.",
+        "expiry_date": "2024-12-25",
+        "condition": "Valid for camera orders above BDT 7000.",
+        "coupon_type": "Delivery"
       }
     ],
     "shop_Link": "https://www.motionview.com.bd/",
@@ -153,6 +278,13 @@
         "expiry_date": "2024-11-30",
         "condition": "Minimum order value of BDT 1000.",
         "coupon_type": "Flat"
+      },
+      {
+        "coupon_code": "GROCERY10",
+        "description": "Get 10% off on grocery orders above BDT 1500.",
+        "expiry_date": "2024-12-15",
+        "condition": "Valid on orders above BDT 1500.",
+        "coupon_type": "Percentage"
       }
     ],
     "shop_Link": "https://www.chaldal.com/",

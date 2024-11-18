@@ -1,7 +1,14 @@
 import { useLoaderData } from "react-router-dom";
 import BrandsCard from "./BrandsCard";
+import { useEffect } from "react";
 
 const Brand = () => {
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
   const coupons = useLoaderData();
   return (
     <div className="min-h-screen w-11/12 mx-auto md:w-10/12 max-w-screen-2xl pb-24">
