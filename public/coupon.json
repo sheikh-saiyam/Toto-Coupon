@@ -25,49 +25,12 @@
     "category": "Fashion, Home & Living",
     "isSaleOn": true
   },
-  {
-    "_id": "2",
-    "brand_name": "Chaldal",
-    "rating": 4.2,
-    "description": "A pioneer in online grocery shopping in Bangladesh, Chaldal delivers fresh fruits, vegetables, meat, and daily essentials directly to your doorstep. With a focus on convenience and quality, it caters to busy urban lifestyles, offering same-day delivery and affordable prices.",
-    "brand_logo": "https://i.ibb.co.com/SXzSYm5/Chaldal-Brand-ID-2021.png",
-    "coupons": [
-      {
-        "coupon_code": "CHALDALSAVE",
-        "description": "Save BDT 200 on your first grocery order.",
-        "expiry_date": "2024-11-30",
-        "condition": "Minimum order value of BDT 1000.",
-        "coupon_type": "Flat"
-      }
-    ],
-    "shop_Link": "https://www.chaldal.com/",
-    "category": "Groceries, Food",
-    "isSaleOn": false
-  },
-  {
-    "_id": "3",
-    "brand_name": "AjkerDeal",
-    "rating": 4.0,
-    "description": "Online shopping platform offering daily deals and discounts.",
-    "brand_logo": "https://i.ibb.co.com/0Yg7Q4Q/pseo-HC0hf2ff-Dcde-Nlojvrr0j-TQKxrz-1-Uo-U10-FQHmm-Nw-Gg-Vwnx-VBZTUK4x2cewv-MBg.png",
-    "coupons": [
-      {
-        "coupon_code": "AJKER20",
-        "description": "Get 20% off on all orders.",
-        "expiry_date": "2024-11-20",
-        "condition": "Valid on all categories.",
-        "coupon_type": "Percentage"
-      }
-    ],
-    "shop_Link": "https://www.ajkerdeal.com/",
-    "category": "Electronics, Fashion, Home Appliances",
-    "isSaleOn": false
-  },
+
   {
     "_id": "4",
     "brand_name": "StarTech",
     "rating": 4.3,
-    "description": "A leading Bangladeshi e-commerce store specializing in computers, accessories, and IT products.",
+    "description": "A renowned retailer specializing in IT products and gadgets in Bangladesh. StarTech is a trusted name for computers, laptops, PC components, gaming accessories, and tech solutions, delivering high-quality products and excellent after-sales service.",
     "brand_logo": "https://i.ibb.co.com/nCGBbh3/startech-logo-0-BF29-AE753-seeklogo-com.png",
     "coupons": [
       {
@@ -86,7 +49,7 @@
     "_id": "5",
     "brand_name": "Aroggo",
     "rating": 4.5,
-    "description": "Online platform for health and wellness products.",
+    "description": "A health-tech platform focused on making healthcare accessible. Aroggo offers online pharmacy services, telemedicine consultations, and health-related products, helping users connect with doctors and medicines seamlessly.",
     "brand_logo": "https://i.ibb.co.com/NjQfKVw/logo-green-af18cf83.png",
     "coupons": [
       {
@@ -105,7 +68,7 @@
     "_id": "6",
     "brand_name": "Rokomari",
     "rating": 4.8,
-    "description": "Bangladesh's leading online bookstore for books, eBooks, and educational materials.",
+    "description": " The leading online bookstore in Bangladesh, Rokomari is a hub for book lovers, offering a wide collection of academic, fiction, and non-fiction titles. With nationwide delivery and a user-friendly site, it’s a favorite for readers.",
     "brand_logo": "https://i.ibb.co.com/sJtgQFM/181544.png",
     "coupons": [
       {
@@ -121,10 +84,29 @@
     "isSaleOn": true
   },
   {
+    "_id": "3",
+    "brand_name": "AjkerDeal",
+    "rating": 4.0,
+    "description": " One of Bangladesh’s largest online marketplaces, AjkerDeal offers a variety of products at competitive prices. It focuses on providing value with frequent deals, discounts, and a broad product selection, making online shopping easier for customers.",
+    "brand_logo": "https://i.ibb.co.com/0Yg7Q4Q/pseo-HC0hf2ff-Dcde-Nlojvrr0j-TQKxrz-1-Uo-U10-FQHmm-Nw-Gg-Vwnx-VBZTUK4x2cewv-MBg.png",
+    "coupons": [
+      {
+        "coupon_code": "AJKER20",
+        "description": "Get 20% off on all orders.",
+        "expiry_date": "2024-11-20",
+        "condition": "Valid on all categories.",
+        "coupon_type": "Percentage"
+      }
+    ],
+    "shop_Link": "https://www.ajkerdeal.com/",
+    "category": "Electronics, Fashion, Home Appliances",
+    "isSaleOn": false
+  },
+  {
     "_id": "7",
     "brand_name": "Foodpanda",
     "rating": 4.6,
-    "description": "Leading online food delivery service in Bangladesh.",
+    "description": " A global food delivery platform, Foodpanda connects customers with their favorite restaurants and grocery stores. Known for fast delivery and exclusive discounts, it ensures convenience for food and grocery shopping.",
     "brand_logo": "https://i.ibb.co.com/LtnsDz7/foodpanda-logo-RGB-horizontal.webp",
     "coupons": [
       {
@@ -143,7 +125,7 @@
     "_id": "8",
     "brand_name": "Motionview",
     "rating": 4.4,
-    "description": "Specialized in electronic devices and gadgets with an emphasis on cameras and photography equipment.",
+    "description": " A rising brand in Bangladesh specializing in smart gadgets, fitness trackers, and tech accessories. MotionView combines innovation with affordability to enhance the lifestyle of tech enthusiasts.",
     "brand_logo": "https://i.ibb.co.com/vX0j7SV/615187ac49391-Logo-Amdadul-Hoque.png",
     "coupons": [
       {
@@ -157,5 +139,24 @@
     "shop_Link": "https://www.motionview.com.bd/",
     "category": "Electronics, Photography",
     "isSaleOn": true
+  },
+  {
+    "_id": "2",
+    "brand_name": "Chaldal",
+    "rating": 4.2,
+    "description": "A pioneer in online grocery shopping in Bangladesh, Chaldal delivers fresh fruits, vegetables, meat, and daily essentials directly to your doorstep. With a focus on convenience and quality, it caters to busy urban lifestyles, offering same-day delivery and affordable prices.",
+    "brand_logo": "https://i.ibb.co.com/SXzSYm5/Chaldal-Brand-ID-2021.png",
+    "coupons": [
+      {
+        "coupon_code": "CHALDALSAVE",
+        "description": "Save BDT 200 on your first grocery order.",
+        "expiry_date": "2024-11-30",
+        "condition": "Minimum order value of BDT 1000.",
+        "coupon_type": "Flat"
+      }
+    ],
+    "shop_Link": "https://www.chaldal.com/",
+    "category": "Groceries, Food",
+    "isSaleOn": false
   }
 ]
