@@ -1,0 +1,161 @@
+[
+  {
+    "_id": "1",
+    "brand_name": "Daraz Bangladesh",
+    "rating": 4.5,
+    "description": "Leading online shopping platform in Bangladesh offering a wide range of products.",
+    "brand_logo": "https://example.com/daraz_logo.png",
+    "coupons": [
+      {
+        "coupon_code": "DARAZ50",
+        "description": "Get 50% off on your first purchase.",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum order value of BDT 500.",
+        "coupon_type": "Percentage"
+      },
+      {
+        "coupon_code": "FREEDEL",
+        "description": "Free delivery on orders above BDT 1000.",
+        "expiry_date": "2024-11-30",
+        "condition": "Valid only in Dhaka city.",
+        "coupon_type": "Delivery"
+      }
+    ],
+    "shop_Link": "https://www.daraz.com.bd/",
+    "category": "Electronics, Fashion, Home & Living",
+    "isSaleOn": true
+  },
+  {
+    "_id": "2",
+    "brand_name": "Chaldal",
+    "rating": 4.2,
+    "description": "Convenient online grocery delivery service in Dhaka.",
+    "brand_logo": "https://example.com/chaldal_logo.png",
+    "coupons": [
+      {
+        "coupon_code": "CHALDALSAVE",
+        "description": "Save BDT 200 on your first grocery order.",
+        "expiry_date": "2024-11-30",
+        "condition": "Minimum order value of BDT 1000.",
+        "coupon_type": "Flat"
+      }
+    ],
+    "shop_Link": "https://www.chaldal.com/",
+    "category": "Groceries, Food",
+    "isSaleOn": false
+  },
+  {
+    "_id": "3",
+    "brand_name": "AjkerDeal",
+    "rating": 4.0,
+    "description": "Online shopping platform offering daily deals and discounts.",
+    "brand_logo": "https://example.com/ajkerdeal_logo.png",
+    "coupons": [
+      {
+        "coupon_code": "AJKER20",
+        "description": "Get 20% off on all orders.",
+        "expiry_date": "2024-11-20",
+        "condition": "Valid on all categories.",
+        "coupon_type": "Percentage"
+      }
+    ],
+    "shop_Link": "https://www.ajkerdeal.com/",
+    "category": "Electronics, Fashion, Home Appliances",
+    "isSaleOn": false
+  },
+  {
+    "_id": "4",
+    "brand_name": "StarTech",
+    "rating": 4.3,
+    "description": "A leading Bangladeshi e-commerce store specializing in computers, accessories, and IT products.",
+    "brand_logo": "https://example.com/startech_logo.png",
+    "coupons": [
+      {
+        "coupon_code": "STARTECH500",
+        "description": "Get BDT 500 off on your first purchase above BDT 5000.",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum purchase of BDT 5000.",
+        "coupon_type": "Flat"
+      }
+    ],
+    "shop_Link": "https://www.startech.com.bd/",
+    "category": "Electronics, Computers, IT Accessories",
+    "isSaleOn": true
+  },
+  {
+    "_id": "5",
+    "brand_name": "Aroggo",
+    "rating": 4.5,
+    "description": "Online platform for health and wellness products.",
+    "brand_logo": "https://example.com/aroggo_logo.png",
+    "coupons": [
+      {
+        "coupon_code": "AROGGO10",
+        "description": "10% off on health supplements.",
+        "expiry_date": "2024-11-30",
+        "condition": "Valid on selected products.",
+        "coupon_type": "Percentage"
+      }
+    ],
+    "shop_Link": "https://www.aroggo.com/",
+    "category": "Health, Wellness",
+    "isSaleOn": true
+  },
+  {
+    "_id": "6",
+    "brand_name": "Rokomari",
+    "rating": 4.8,
+    "description": "Bangladesh's leading online bookstore for books, eBooks, and educational materials.",
+    "brand_logo": "https://example.com/rokomari_logo.png",
+    "coupons": [
+      {
+        "coupon_code": "BOOKS100",
+        "description": "Get BDT 100 off on books above BDT 1000.",
+        "expiry_date": "2024-11-25",
+        "condition": "Valid on selected titles.",
+        "coupon_type": "Flat"
+      }
+    ],
+    "shop_Link": "https://www.rokomari.com/",
+    "category": "Books, Education",
+    "isSaleOn": true
+  },
+  {
+    "_id": "7",
+    "brand_name": "Foodpanda",
+    "rating": 4.6,
+    "description": "Leading online food delivery service in Bangladesh.",
+    "brand_logo": "https://example.com/foodpanda_logo.png",
+    "coupons": [
+      {
+        "coupon_code": "FOODPANDFREE",
+        "description": "Get free delivery on your first order.",
+        "expiry_date": "2024-12-15",
+        "condition": "Only valid for new users.",
+        "coupon_type": "Delivery"
+      }
+    ],
+    "shop_Link": "https://www.foodpanda.com.bd/",
+    "category": "Food, Delivery",
+    "isSaleOn": true
+  },
+  {
+    "_id": "8",
+    "brand_name": "Motionview",
+    "rating": 4.4,
+    "description": "Specialized in electronic devices and gadgets with an emphasis on cameras and photography equipment.",
+    "brand_logo": "https://example.com/motionview_logo.png",
+    "coupons": [
+      {
+        "coupon_code": "MOTIONVIEW1000",
+        "description": "Save BDT 1000 on cameras above BDT 10000.",
+        "expiry_date": "2024-12-10",
+        "condition": "Valid on selected cameras.",
+        "coupon_type": "Flat"
+      }
+    ],
+    "shop_Link": "https://www.motionview.com.bd/",
+    "category": "Electronics, Photography",
+    "isSaleOn": true
+  }
+]
