@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa6";
 import { LuLogIn } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 
 const Register = () => {
   const { setUser, createNewUser, googleLogin, updateUserProfile } =
@@ -42,6 +43,13 @@ const Register = () => {
         console.log(error);
       });
   };
+
+  //   for toggle password
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
   return (
     <div>
       <div className="bg-base-200">
@@ -109,13 +117,10 @@ const Register = () => {
                 <label className="label px-0">
                   <span className="font-semibold">Password</span>
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  className="input input-bordered"
-                  required
-                />
+                 //   for toggle password
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
               </div>
               {/* button div */}
               <div className="form-control mt-4">

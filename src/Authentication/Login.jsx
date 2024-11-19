@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa6";
 import { LuLogIn } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -37,6 +38,11 @@ const Login = () => {
       .catch((error) => {
         console.log(error);
       });
+  };
+  //   for toggle password
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
   };
 
   return (
@@ -76,13 +82,23 @@ const Login = () => {
               <label className="label px-0">
                 <span className="font-semibold">Password</span>
               </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                className="input input-bordered"
-                required
-              />
+              <div className="relative">
+                <input
+                  type={passwordVisible ? "text" : "password"}
+                  name="password"
+                  placeholder="Password"
+                  className="input input-bordered w-full"
+                  required
+                />
+                <label
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                  className="absolute inset-y-0 right-3 flex items-center text-gray-500 text-xl"
+                  aria-label="Toggle password visibility"
+                >
+                  {passwordVisible ? <IoEyeSharp /> : <IoEyeOffSharp />}
+                </label>
+              </div>
               <label className="label">
                 <a
                   href="#"
