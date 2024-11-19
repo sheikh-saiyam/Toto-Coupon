@@ -3,6 +3,8 @@ import Banner from "../components/Banner/Banner";
 import TopBrands from "../components/Brand/TopBrands";
 import BrandsOnSale from "../components/Brand/BrandsOnSale";
 import MobileApp from "../components/ExtraSection/MobileApp";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const HomeLayout = () => {
   const couponData = useLoaderData();
