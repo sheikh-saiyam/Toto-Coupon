@@ -1,7 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BiSolidCoupon } from "react-icons/bi";
+import { FaStar } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
+import { LuClipboardList } from "react-icons/lu";
 import { Link, useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const BrandDetails = () => {
   useEffect(() => {
@@ -11,35 +14,53 @@ const BrandDetails = () => {
     });
   });
   const details = useLoaderData();
-  const { brand_name, brand_logo, coupons, shop_Link } = details;
+  const { brand_name, brand_logo, coupons, shop_Link, category, rating } =
+    details;
 
-  //   const { coupon_code, expiry_date, condition, coupon_type , description} = coupons;
+  const [isCopied, setIsCopied] = useState(false);
   return (
-    <div className="min-h-screen w-11/12 mx-auto md:w-10/12 max-w-screen-2xl pt-12 pb-24">
+    <div className="w-11/12 mx-auto md:w-10/12 max-w-screen-2xl py-16">
       <div>
         <div className="space-y-4 sm:space-y-0 sm:flex gap-4">
           <div className="border p-4">
             <img className="w-full sm:w-64 h-32" src={brand_logo} alt="" />
           </div>
           <div>
-            <h1 className="font-bold text-3xl">
+            <h1 className="font-bold text-3xl mt-0">
               {brand_name} All Coupon Code 2024
+            </h1>
+            <h3 className="my-2 text-gray-600 font-semibold text-lg">
+              Category: {category}
+            </h3>
+            <h1 className="flex items-center text-gray-600 font-semibold text-lg gap-2">
+              Rating:
+              <i className="text-yellow-400 mr-1 flex gap-1">
+                {Array.from(
+                  {
+                    length:
+                      rating > 4.6 ? Math.round(rating) : Math.floor(rating),
+                  },
+                  (_, index) => (
+                    <FaStar key={index} />
+                  )
+                )}
+              </i>
             </h1>
           </div>
         </div>
       </div>
       {/* coupon section */}
-      <div className="py-8 grid gird-col-1 md:grid-cols-2 gap-6 ">
+      <div className="pt-8 grid gird-col-1 lg:grid-cols-2 gap-6">
         {coupons.map((coupon) => (
-          <div key={coupon.coupon_code} className=" w-full flex">
-            <div className="bg-primary w-5/12 p-4 flex justify-center items-center text-center">
+          <div key={coupon.coupon_code} className="w-full md:flex">
+            <div className="bg-primary md:w-5/12 p-4 flex justify-center items-center text-center">
               <h1 className="text-white font-bold text-2xl">
                 {coupon.description}
               </h1>
             </div>
-            <div className="p-6 w-7/12 border-l-0 border-[3px]">
+            <div className="p-6 md:w-7/12 border-t-0 md:border-l-0 border-4 md:border-[3px]">
               <div>
-                <div className="space-y-2 border-primary border-2 p-4 text-center">
+                <div className="space-y-2 border-primary border-2 p-6 md:p-4 text-center">
                   <h1 className="text-xl font-bold ">
                     Condition: {coupon.condition}
                   </h1>
@@ -54,7 +75,7 @@ const BrandDetails = () => {
                         .getElementById(`modal_${coupon.coupon_code}`)
                         .showModal()
                     }
-                    className="btn flex items-center text-lg gap-2 rounded-none w-full font-semibold bg-primary text-white hover:text-primary"
+                    className="btn h-full flex items-center text-lg rounded-none w-full font-semibold bg-primary text-white hover:text-primary"
                   >
                     <BiSolidCoupon />
                     View Coupon Code
@@ -62,39 +83,57 @@ const BrandDetails = () => {
                 </div>
               </div>
               {/* modal */}
-              <dialog
-                id={`modal_${coupon.coupon_code}`}
-                className="modal modal-bottom sm:modal-middle"
-              >
-                <div className="modal-box">
-                  <div className="modal-action mt-0 mb-6">
+              <dialog id={`modal_${coupon.coupon_code}`} className="modal">
+                <div className="modal-box rounded-lg sm:p-12">
+                  <div className="modal-action mt-0 mb-6 flex gap-2 justify-between items-center">
+                    <div>
+                      <h1 className="font-bold text-xl">
+                        Coupon Type{" "}
+                        <span className="text-gray-700 font-semibold">
+                          : {coupon.coupon_type}
+                        </span>
+                      </h1>
+                    </div>
                     <form method="dialog">
-                      <button className="btn text-3xl font-bold btn-active">
-                        <IoClose></IoClose>
+                      <button className="btn border-2 border-gray-300 bg-transparent flex items-center text-lg">
+                        <IoClose className="text-xl font-bold "></IoClose>
                       </button>
                     </form>
                   </div>
                   <div className="w-full">
-                    <div className="join join-horizontal w-full">
-                      <h1 className="join-item w-1/2 flex items-center text-center justify-center select-none bg-primary text-white px-2 text-2xl font-semibold">
-                        Code: {coupon.coupon_code}
+                    <div className="join join-vertical sm:join-horizontal w-full">
+                      <h1 className="join-item sm:w-1/2 flex items-center text-center justify-center select-none bg-white border-2 sm:border-r-0 border-[#cccccc] p-2 text-xl font-semibold">
+                        {coupon.coupon_code}
                       </h1>
                       <button
-                        onClick={() =>
+                        onClick={() => {
+                          document.getElementById(
+                            `modal_${coupon.coupon_code}`
+                          );
                           navigator.clipboard
                             .writeText(coupon.coupon_code)
-                            .then(() => alert("Copied!"))
-                        }
-                        className="join-item btn p-4 w-1/2"
+                            .then(() => {
+                              toast.success("Coupon Copied!");
+                              setIsCopied(true);
+                              setTimeout(() => setIsCopied(false), 3000);
+                            });
+                        }}
+                        className="join-item btn p-2 sm:w-1/2 bg-primary border-primary border-2 border-l-0 text-white text-lg flex items-center"
                       >
-                        Copy Coupon Code
+                        <LuClipboardList />
+                        {isCopied ? "Copied" : "Copy Code"}
                       </button>
-                    </div>
+                    </div>{" "}
+                    {isCopied && (
+                      <button className="mt-4 tex-lg font-semibold bg-green-100 border-primary btn w-full hover:bg-green-100 hover:border-primary">
+                        Coupon Copied
+                      </button>
+                    )}
                     <div>
                       <Link
                         to={shop_Link}
                         target="_blank"
-                        className="btn w-full mt-6"
+                        className="btn w-full mt-6 border-primary border-2 bg-transparent text-lg font-semibold"
                       >
                         Use Now
                       </Link>

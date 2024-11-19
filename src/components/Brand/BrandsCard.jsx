@@ -9,9 +9,6 @@ const BrandsCard = ({ coupon }) => {
     rating,
     description,
     brand_logo,
-    coupons,
-    shop_Link,
-    category,
     isSaleOn,
   } = coupon;
   return (

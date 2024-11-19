@@ -25,15 +25,23 @@ const router = createBrowserRouter([
         loader: async ({ params }) => {
           const res = await fetch("/coupon.json");
           const data = await res.json();
-          const singleData = data.find((p)=> p._id == params.id.trim());
+          const singleData = data.find((p) => p._id == params.id.trim());
           return singleData;
         },
       },
       {
         path: "/about",
-        element: <h1 className="text-center text-3xl my-8">About Developer</h1>
-      }
+        element: <h1 className="text-center text-3xl my-8">About Developer</h1>,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: (
+      <h1 className="flex justify-center items-center font-bold text-5xl">
+        Error Page
+      </h1>
+    ),
   },
 ]);
 

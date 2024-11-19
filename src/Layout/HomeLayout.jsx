@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner/Banner";
 import TopBrands from "../components/Brand/TopBrands";
 import BrandsOnSale from "../components/Brand/BrandsOnSale";
+import MobileApp from "../components/ExtraSection/MobileApp";
 
 const HomeLayout = () => {
   const couponData = useLoaderData();
@@ -20,6 +21,9 @@ const HomeLayout = () => {
         </div>
       </div>
       {/* brands on sale */}
+      {/* get out mobile app */}
+      <MobileApp></MobileApp>
+      {/* get out mobile app */}
     </div>
   );
 };
