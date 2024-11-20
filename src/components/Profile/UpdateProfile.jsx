@@ -30,7 +30,57 @@ const UpdateProfile = () => {
 
   return (
     <div className="animate__animated animate__bounceInLeft bg-gradient-to-r to-secondary  from-primary  my-12 mx-auto w-11/12 md:w-8/12 py-12 rounded-2xl">
-
+      <div>
+        <h1 className="text-center mb-6 text-white text-3xl lg:text-4xl font-extrabold drop-shadow-lg lg:leading-[50px] tracking-wide">
+          <span>
+            <Typewriter
+              words={["Update Your Profile"]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={50}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </span>
+        </h1>
+      </div>
+      <div className="mx-auto w-11/12 md:w-7/12 lg:w-5/12 py-12 bg-white px-8 rounded-xl">
+        <form
+          onSubmit={handleUpdateUserProfile}
+          className="card-body p-0 gap-0"
+        >
+          <div className="form-control">
+            <label className="label px-0">
+              <span className="font-semibold">Updated Name</span>
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              className="input input-bordered"
+              required
+            />
+          </div>
+          <div className="form-control">
+            <label className="label px-0 mt-2">
+              <span className="font-semibold">Updated Photo Url</span>
+            </label>
+            <input
+              type="text"
+              name="photo"
+              placeholder="Photo Url"
+              className="input input-bordered"
+              required
+            />
+          </div>
+          <div className="form-control">
+            <button className="btn w-full mt-6 text-lg font-bold text-white bg-primary">
+              Update Information
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
