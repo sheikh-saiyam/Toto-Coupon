@@ -6,6 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import Swal from "sweetalert2";
 import { MdOutlineError } from "react-icons/md";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const { setUser, createNewUser, googleLogin, updateUserProfile } =
@@ -92,6 +93,11 @@ const Register = () => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Register || ToTo-coupon</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="bg-base-200">
         <div className="w-11/12 mx-auto md:w-10/12 max-w-screen-2xl py-12 flex flex-col-reverse md:flex md:flex-row">
           <div className="bg-white py-12 px-8 md:w-7/12">

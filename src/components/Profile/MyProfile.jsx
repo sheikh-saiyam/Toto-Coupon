@@ -1,14 +1,18 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { CgProfile } from "react-icons/cg";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Profile || ToTo-coupon</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="mx-auto w-11/12 lg:w-8/12 my-12 rounded-xl py-12 bg-gradient-to-r to-secondary  from-primary flex flex-col justify-center items-center animate__animated animate__backInLeft">
         {/* Cover Section */}
         <div className="flex flex-col gap-y-2 justify-center text-center">
@@ -45,7 +49,10 @@ const MyProfile = () => {
             <p className="text-center text-gray-600 mt-2">{user.email}</p>
 
             <div className="text-center mt-4">
-              <Link to={"/profile/update"} className="btn btn-wide text-white bg-primary text-lg font-semibold">
+              <Link
+                to={"/profile/update"}
+                className="btn btn-wide text-white bg-primary text-lg font-semibold"
+              >
                 Update Profile
               </Link>
             </div>

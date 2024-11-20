@@ -86,15 +86,26 @@ const Navbar = () => {
             {isOpen && (
               <ul
                 tabIndex={0}
-                className="menu w-60 dropdown-content bg-base-100 rounded-box z-[1] mt-4 p-4 border-2 border-primary space-y-3"
+                className="menu w-max dropdown-content bg-base-100 rounded-box z-50 mt-4 p-4 border-2 border-primary space-y-3"
               >
                 <li className="font-semibold">{links}</li>{" "}
-                <Link
-                  to={"/"}
-                  className="btn bg-primary font-semibold text-lg text-white"
-                >
-                  Registration
-                </Link>
+                {user && user.email ? (
+                  <button
+                    onClick={logOut}
+                    className="btn bg-primary font-semibold text-lg text-white px-8
+                 items-center gap-2 flex"
+                  >
+                    <BiLogOut />
+                    Log Out
+                  </button>
+                ) : (
+                  <Link
+                    to={"/"}
+                    className="btn bg-primary font-semibold text-lg text-white"
+                  >
+                    Registration
+                  </Link>
+                )}
                 {user && user?.email && user?.photoURL ? (
                   <div className="md:flex gap-2 items-center">
                     <div className="flex flex-col space-y-2 justify-center">
@@ -166,7 +177,7 @@ const Navbar = () => {
               <button
                 onClick={logOut}
                 className="btn bg-primary font-semibold text-lg text-white px-8
-                flex items-center gap-2"
+                 items-center gap-2 hidden md:flex"
               >
                 <BiLogOut />
                 Log Out

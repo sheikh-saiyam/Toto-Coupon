@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -74,6 +75,11 @@ const Login = () => {
 
   return (
     <div className="bg-base-200">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Login || ToTo-coupon</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="w-11/12 mx-auto md:w-10/12 max-w-screen-2xl py-12 flex flex-col-reverse md:flex md:flex-row">
         <div className="bg-white py-12 px-8 md:w-1/2">
           <div className="mb-4">
@@ -91,7 +97,9 @@ const Login = () => {
               <FaGoogle className="text-xl"></FaGoogle> Log in Google
             </button>
           </div>
-          <div className="divider font-semibold">Or</div>
+          <div className="divider font-semibold">
+            Or Login with Email & Password
+          </div>
           <form onSubmit={handleLogin} className="card-body p-0 gap-0">
             <div className="form-control">
               <label className="label px-0">
@@ -127,12 +135,12 @@ const Login = () => {
                 </label>
               </div>
               <label className="label">
-                <a
-                  href="#"
+                <Link
+                  to={"/forgetPassword"}
                   className="font-semibold underline link link-hover my-2"
                 >
                   Forgot password?
-                </a>
+                </Link>
               </label>
             </div>
             {error && (
@@ -152,9 +160,9 @@ const Login = () => {
             <h1 className="font-bold text-3xl md:text-4xl">
               Welcome to Login Page
             </h1>
-            <p className="font-semibold text-lg md:text-xl">
+            <h3 className="font-semibold text-lg md:text-xl">
               Don't have an account
-            </p>
+            </h3>
             <Link
               to={"/register"}
               className="bg-transparent border-2 border-white btn btn-wide text-lg font-bold rounded-full text-white"

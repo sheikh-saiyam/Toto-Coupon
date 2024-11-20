@@ -4,19 +4,23 @@ const Banner = () => {
 
   const images = [
     {
-      src: "https://i.ibb.co.com/tqYFDx8/green-coupon-with-white-bg-6fb95c.jpg",
+      src: "https://i.ibb.co.com/609KKp6/Untitled-Project-1.jpg",
       alt: "Image 1",
     },
     {
-      src: "https://i.ibb.co.com/YB88mTb/green-coupon-with-white-bg.jpg",
-      alt: "Image 1",
+      src: "https://i.ibb.co.com/Sw0LJs3/Untitled-Project-4.jpg",
+      alt: "Image 4",
     },
     {
-      src: "https://i.ibb.co.com/fxGTCzT/green-coupon-with-white-bg-modified.jpg",
-      alt: "Image 1",
+      src: "https://i.ibb.co.com/bKjmp8c/Untitled-Project-5.jpg",
+      alt: "Image 5",
     },
     {
-      src: "https://i.ibb.co.com/xYbchJh/coupon.jpg",
+      src: "https://i.ibb.co.com/9V0LH9M/Untitled-Project-2.jpg",
+      alt: "Image 2",
+    },
+    {
+      src: "https://i.ibb.co.com/4d5kMb0/Untitled-Project-3.jpg",
       alt: "Image 3",
     },
   ];
@@ -41,10 +45,10 @@ const Banner = () => {
         >
           <img
             src={image.src}
-            className="w-full md:h-[550px] rounded-2xl lg:px-5 "
+            className="w-full md:h-[550px] rounded-2xl border-2 border-[#cccccc] lg:px-5 "
             alt={image.alt}
           />
-          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-5 text-white flex justify-center items-center"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-5  text-white flex justify-center items-center"></div>
         </div>
       ))}
 

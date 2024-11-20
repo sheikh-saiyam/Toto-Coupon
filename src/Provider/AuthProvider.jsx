@@ -45,7 +45,8 @@ const AuthProvider = ({ children }) => {
   // for update profile
   const updateUserProfile = (updatedData) => {
     return updateProfile(auth.currentUser, updatedData);
-  }
+  };
+  
   // for save the user
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -70,7 +71,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     googleLogin,
     loading,
-    updateUserProfile
+    updateUserProfile,
   };
 
   return (

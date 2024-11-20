@@ -11,7 +11,7 @@ const BrandsCard = ({ coupon }) => {
         <div className="md:w-4/12 p-5 rounded-lg border-2 relative">
           <div>
             <img src={brand_logo} alt={brand_name} className="w-full h-32" />
-            <div className="absolute top-4 right-2">
+            <div className="absolute top-5 right-2">
               {isSaleOn ? (
                 <button className="text-sm text-green-500 font-bold animate-bounce">
                   <span className="">Sale is on!</span>

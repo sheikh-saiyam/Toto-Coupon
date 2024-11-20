@@ -78,25 +78,13 @@ const Footer = () => {
           <div className="pb-10 text-white">
             <h2 className="text-3xl font-bold mb-4 text-center">Find Us On</h2>
             <div className="flex justify-center space-x-8 mt-4 md:mt-0">
-              <a
-                href="https://www.facebook.com/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a>
                 <FaFacebook className="text-2xl hover:text-gray-300" />
               </a>
-              <a
-                href="https://twitter.com/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a>
                 <FaTwitter className="text-2xl hover:text-gray-300" />
               </a>
-              <a
-                href="https://www.instagram.com/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a>
                 <FaInstagram className="text-2xl hover:text-gray-300" />
               </a>
               <a

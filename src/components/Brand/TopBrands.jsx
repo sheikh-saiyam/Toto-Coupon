@@ -11,7 +11,7 @@ const TopBrands = () => {
             <Link to={"/brands"}>
               <div className="border p-4 rounded-lg">
                 <img
-                  className="w-48 h-24"
+                  className="w-48 h-16 md:h-24"
                   src="https://i.ibb.co.com/4mQp5rK/800px-Daraz-Logo.png"
                   alt=""
                 />
@@ -20,7 +20,7 @@ const TopBrands = () => {
             <Link to={"/brands"}>
               <div className="border p-4 rounded-lg">
                 <img
-                  className="w-48 h-24"
+                  className="w-48 h-16 md:h-24"
                   src="https://i.ibb.co.com/LtnsDz7/foodpanda-logo-RGB-horizontal.webp"
                   alt=""
                 />
@@ -29,7 +29,7 @@ const TopBrands = () => {
             <Link to={"/brands"}>
               <div className="border p-4 rounded-lg">
                 <img
-                  className="w-48 h-24"
+                  className="w-48 h-16 md:h-24"
                   src="https://i.ibb.co.com/nCGBbh3/startech-logo-0-BF29-AE753-seeklogo-com.png"
                   alt=""
                 />
@@ -38,7 +38,7 @@ const TopBrands = () => {
             <Link to={"/brands"}>
               <div className="border p-4 rounded-lg">
                 <img
-                  className="w-48 h-24"
+                  className="w-48 h-16 md:h-24"
                   src="https://i.ibb.co.com/sJtgQFM/181544.png"
                   alt=""
                 />
@@ -47,7 +47,7 @@ const TopBrands = () => {
             <Link to={"/brands"}>
               <div className="border p-4 rounded-lg">
                 <img
-                  className="w-48 h-24"
+                  className="w-48 h-16 md:h-24"
                   src="https://i.ibb.co.com/NjQfKVw/logo-green-af18cf83.png"
                   alt=""
                 />
@@ -56,7 +56,7 @@ const TopBrands = () => {
             <Link to={"/brands"}>
               <div className="border p-4 rounded-lg">
                 <img
-                  className="w-48 h-24"
+                  className="w-48 h-16 md:h-24"
                   src="https://i.ibb.co.com/0Yg7Q4Q/pseo-HC0hf2ff-Dcde-Nlojvrr0j-TQKxrz-1-Uo-U10-FQHmm-Nw-Gg-Vwnx-VBZTUK4x2cewv-MBg.png"
                   alt=""
                 />
@@ -65,7 +65,7 @@ const TopBrands = () => {
             <Link to={"/brands"}>
               <div className="border p-4 rounded-lg ">
                 <img
-                  className="w-48 h-24"
+                  className="w-48 h-16 md:h-24"
                   src="https://i.ibb.co.com/SXzSYm5/Chaldal-Brand-ID-2021.png"
                   alt=""
                 />
@@ -74,7 +74,7 @@ const TopBrands = () => {
             <Link to={"/brands"}>
               <div className="border p-4 rounded-lg mr-8">
                 <img
-                  className="w-48 h-24"
+                  className="w-48 h-16 md:h-24"
                   src="https://i.ibb.co.com/vX0j7SV/615187ac49391-Logo-Amdadul-Hoque.png"
                   alt=""
                 />

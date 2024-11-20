@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { BiSolidCoupon } from "react-icons/bi";
 import { FaStar } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
@@ -20,6 +21,11 @@ const BrandDetails = () => {
   const [isCopied, setIsCopied] = useState(false);
   return (
     <div className="w-11/12 mx-auto md:w-10/12 max-w-screen-2xl py-16">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Coupon-Page || ToTo-coupon</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div>
         <div className="space-y-4 sm:space-y-0 sm:flex gap-4">
           <div className="border p-4">
@@ -84,7 +90,7 @@ const BrandDetails = () => {
               </div>
               {/* modal */}
               <dialog id={`modal_${coupon.coupon_code}`} className="modal">
-                <div className="modal-box rounded-lg sm:p-12">
+                <div className="modal-box rounded-lg sm:p-12 z-50">
                   <div className="modal-action mt-0 mb-6 flex gap-2 justify-between items-center">
                     <div>
                       <h1 className="font-bold text-xl">
@@ -95,7 +101,7 @@ const BrandDetails = () => {
                       </h1>
                     </div>
                     <form method="dialog">
-                      <button className="btn border-2 border-gray-300 bg-transparent flex items-center text-lg btn-circle">
+                      <button className="btn border-2 border-gray-300 bg-transparent flex items-center text-center text-lg btn-circle ">
                         <IoClose className="text-xl font-bold "></IoClose>
                       </button>
                     </form>
@@ -125,7 +131,7 @@ const BrandDetails = () => {
                       </button>
                     </div>{" "}
                     {isCopied && (
-                      <button className="mt-6 tex-lg font-semibold bg-green-100 border-primary btn w-full hover:bg-green-100 hover:border-primary">
+                      <button className="mt-6 tex-lg font-semibold bg-green-100 border border-primary p-2 rounded-xl w-full hover:bg-green-100 hover:border-primary">
                         Coupon Copied
                       </button>
                     )}

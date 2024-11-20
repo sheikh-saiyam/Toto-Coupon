@@ -3,8 +3,7 @@ import Banner from "../components/Banner/Banner";
 import TopBrands from "../components/Brand/TopBrands";
 import BrandsOnSale from "../components/Brand/BrandsOnSale";
 import MobileApp from "../components/ExtraSection/MobileApp";
-import { useContext } from "react";
-import { AuthContext } from "../Provider/AuthProvider";
+import ExtraSection from "../components/ExtraSection/ExtraSection";
 
 const HomeLayout = () => {
   const couponData = useLoaderData();
@@ -26,6 +25,9 @@ const HomeLayout = () => {
       {/* get out mobile app */}
       <MobileApp></MobileApp>
       {/* get out mobile app */}
+      {/* Extra section / why choose us */}
+      <ExtraSection></ExtraSection>
+      {/* Extra section / why choose us */}
     </div>
   );
 };
