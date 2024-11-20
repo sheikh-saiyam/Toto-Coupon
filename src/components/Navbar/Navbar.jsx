@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa6";
 import { IoClose, IoHomeOutline } from "react-icons/io5";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { BiLogOut } from "react-icons/bi";
-import { toast } from "react-toastify";
+import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const links = [
@@ -45,6 +45,7 @@ const Navbar = () => {
               : "flex gap-1 items-center"
           }
         >
+          <CgProfile />
           My Profile
         </NavLink>
       )}

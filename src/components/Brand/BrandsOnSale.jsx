@@ -5,7 +5,7 @@ const BrandsOnSale = ({ coupon }) => {
   const { brand_logo, brand_name, coupons, category } = coupon;
   return (
     <div className="min-h-fit">
-      <div className="w-full h-full p-4 border-2 rounded-2xl">
+      <div className="w-full h-full p-4 border-2 rounded-2xl ">
         <div className="p-4 border rounded-xl mb-2">
           <Link to={"/brands"}>
             <img className="w-full h-32" src={brand_logo} alt="" />

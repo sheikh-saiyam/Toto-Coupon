@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa6";
 import { LuLogIn } from "react-icons/lu";
