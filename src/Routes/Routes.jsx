@@ -7,11 +7,13 @@ import Login from "../Authentication/Login";
 import Register from "../Authentication/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import MyProfile from "../components/Profile/MyProfile";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -47,7 +49,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <PrivateRoutes><MyProfile></MyProfile></PrivateRoutes>
+        element: (
+          <PrivateRoutes>
+            <MyProfile></MyProfile>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/about",
@@ -57,11 +63,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: (
-      <h1 className="flex justify-center items-center font-bold text-5xl">
-        Error Page
-      </h1>
-    ),
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 

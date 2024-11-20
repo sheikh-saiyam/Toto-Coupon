@@ -4,18 +4,36 @@ import { LuLogIn } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
+import Swal from "sweetalert2";
+import { MdOutlineError } from "react-icons/md";
 
 const Register = () => {
   const { setUser, createNewUser, googleLogin, updateUserProfile } =
     useContext(AuthContext);
   const navigate = useNavigate();
+
+  const [error, setError] = useState("");
   const handleRegister = (e) => {
     e.preventDefault();
-
     const name = e.target.name.value;
     const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    // validation
+    setError("");
+    if (password.length < 6) {
+      setError("Password must be at least 6 character");
+      return;
+    }
+    if (!/[a-z]/.test(password)) {
+      setError("Password Must have a Lowercase letter");
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      setError("Password Must have a Uppercase letter");
+      return;
+    }
+    // validation
 
     createNewUser(email, password)
       .then((result) => {
@@ -23,12 +41,23 @@ const Register = () => {
         setUser(currentUser);
         updateUserProfile({ displayName: name, photoURL: photo });
         navigate("/");
+
+        // for account create modal
+        Swal.fire({
+          icon: "success",
+          title: `Account created successfully , Welcome, ${name}!`,
+          text: "We're so glad to have you here. Enjoy exploring our site!",
+          showConfirmButton: false,
+          background: "#f0f8ff",
+          color: "#4B0082",
+          timer: 3000,
+        });
       })
       .catch((error) => {
-        console.log(error);
+        if (error.message) {
+          setError("Email Already Used");
+        }
       });
-
-    console.log({ name, photo, email, password });
   };
 
   // function for google login
@@ -38,6 +67,17 @@ const Register = () => {
         const currentUser = result.user;
         setUser(currentUser);
         navigate("/");
+
+        // for welcome modal
+        Swal.fire({
+          icon: "success",
+          title: `Welcome, ${currentUser.displayName}!`,
+          text: "We're so glad to have you here. Enjoy exploring our site!",
+          showConfirmButton: false,
+          background: "#f0f8ff",
+          color: "#4B0082",
+          timer: 3000,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -117,11 +157,30 @@ const Register = () => {
                 <label className="label px-0">
                   <span className="font-semibold">Password</span>
                 </label>
-                 //   for toggle password
-  const [passwordVisible, setPasswordVisible] = useState(false);
-  const togglePasswordVisibility = () => {
-    setPasswordVisible(!passwordVisible);
+                <div className="relative">
+                  <input
+                    type={passwordVisible ? "text" : "password"}
+                    name="password"
+                    placeholder="Password"
+                    className="input input-bordered w-full"
+                    required
+                  />
+                  <label
+                    type="button"
+                    onClick={togglePasswordVisibility}
+                    className="absolute inset-y-0 right-3 flex items-center text-gray-500 text-xl"
+                    aria-label="Toggle password visibility"
+                  >
+                    {passwordVisible ? <IoEyeSharp /> : <IoEyeOffSharp />}
+                  </label>
+                </div>
               </div>
+              {error && (
+                <label className=" flex justify-center items-center gap-2 mt-6 text-red-500 bg-red-100 p-2 rounded-lg text-center mb-2 text-lg font-semibold">
+                  <MdOutlineError className="text-xl" />
+                  {error}
+                </label>
+              )}
               {/* button div */}
               <div className="form-control mt-4">
                 <button className="btn w-full text-lg font-bold text-white bg-primary">

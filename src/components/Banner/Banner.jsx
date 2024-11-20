@@ -4,12 +4,20 @@ const Banner = () => {
 
   const images = [
     {
-      src: "https://i.ibb.co.com/w6ctgYT/Screenshot-2024-11-19-195913.png",
-      alt: "Image 2",
+      src: "https://i.ibb.co.com/tqYFDx8/green-coupon-with-white-bg-6fb95c.jpg",
+      alt: "Image 1",
+    },
+    {
+      src: "https://i.ibb.co.com/YB88mTb/green-coupon-with-white-bg.jpg",
+      alt: "Image 1",
+    },
+    {
+      src: "https://i.ibb.co.com/fxGTCzT/green-coupon-with-white-bg-modified.jpg",
+      alt: "Image 1",
     },
     {
       src: "https://i.ibb.co.com/xYbchJh/coupon.jpg",
-      alt: "Image 1",
+      alt: "Image 3",
     },
   ];
   const nextSlide = () => {
@@ -22,7 +30,7 @@ const Banner = () => {
     );
   };
   return (
-    <div className="carousel w-full min-h-screen relative rounded-2xl mb-12 lg:mb-24">
+    <div className="carousel w-full relative rounded-2xl mb-12 lg:mb-24">
       {/* Carousel Items */}
       {images.map((image, index) => (
         <div
@@ -33,19 +41,25 @@ const Banner = () => {
         >
           <img
             src={image.src}
-            className="w-full h-full rounded-2xl lg:px-5"
+            className="w-full md:h-[550px] rounded-2xl lg:px-5 "
             alt={image.alt}
           />
-          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-15 text-white flex justify-center items-center"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-5 text-white flex justify-center items-center"></div>
         </div>
       ))}
 
       {/* Carousel Controls */}
       <div className="absolute flex justify-between lg:justify-between bottom-0 lg:bottom-auto transform lg:-translate-y-1/2 left-0 right-0 lg:left-5 lg:right-5 lg:top-1/2 z-10">
-        <button onClick={prevSlide} className="btn rounded-none lg:btn-circle">
+        <button
+          onClick={prevSlide}
+          className="btn btn-active rounded-none lg:btn-circle"
+        >
           ❮
         </button>
-        <button onClick={nextSlide} className="btn rounded-none lg:btn-circle">
+        <button
+          onClick={nextSlide}
+          className="btn btn-active rounded-none lg:btn-circle"
+        >
           ❯
         </button>
       </div>

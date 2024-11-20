@@ -95,7 +95,7 @@ const BrandDetails = () => {
                       </h1>
                     </div>
                     <form method="dialog">
-                      <button className="btn border-2 border-gray-300 bg-transparent flex items-center text-lg">
+                      <button className="btn border-2 border-gray-300 bg-transparent flex items-center text-lg btn-circle">
                         <IoClose className="text-xl font-bold "></IoClose>
                       </button>
                     </form>
@@ -125,7 +125,7 @@ const BrandDetails = () => {
                       </button>
                     </div>{" "}
                     {isCopied && (
-                      <button className="mt-4 tex-lg font-semibold bg-green-100 border-primary btn w-full hover:bg-green-100 hover:border-primary">
+                      <button className="mt-6 tex-lg font-semibold bg-green-100 border-primary btn w-full hover:bg-green-100 hover:border-primary">
                         Coupon Copied
                       </button>
                     )}

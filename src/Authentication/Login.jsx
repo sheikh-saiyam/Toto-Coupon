@@ -1,16 +1,20 @@
 import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa6";
 import { LuLogIn } from "react-icons/lu";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const navigatePath = location.state?.pathname || "/";
+
   const { setUser, userLogin, googleLogin } = useContext(AuthContext);
+  const [error, setError] = useState("");
   const handleLogin = (e) => {
     e.preventDefault();
-
     const email = e.target.email.value;
     const password = e.target.password.value;
 
@@ -18,13 +22,24 @@ const Login = () => {
       .then((result) => {
         const currentUser = result.user;
         setUser(currentUser);
-        navigate("/");
+        navigate(navigatePath);
+        // for login modal
+        Swal.fire({
+          icon: "success",
+          title: `Congratulation Login Success, Welcome, ${currentUser.displayName}!`,
+          text: "We're so glad to have you here. Enjoy exploring our site!",
+          showConfirmButton: false,
+          background: "#f0f8ff",
+          color: "#4B0082",
+          timer: 3000,
+        });
       })
-      .catch((error) => {
+      .catch((err) => {
         console.log(error);
+        if (err.message) {
+          setError("Incorrect Email Or Password");
+        }
       });
-
-    console.log({ email, password });
   };
 
   // function for google login
@@ -33,12 +48,23 @@ const Login = () => {
       .then((result) => {
         const currentUser = result.user;
         setUser(currentUser);
-        navigate("/");
+        navigate(navigatePath);
+        // for login modal
+        Swal.fire({
+          icon: "success",
+          title: `Congratulation Login Success, Welcome, ${currentUser.displayName}!`,
+          text: "We're so glad to have you here. Enjoy exploring our site!",
+          showConfirmButton: false,
+          background: "#f0f8ff",
+          color: "#4B0082",
+          timer: 3000,
+        });
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
   //   for toggle password
   const [passwordVisible, setPasswordVisible] = useState(false);
   const togglePasswordVisibility = () => {
@@ -108,6 +134,11 @@ const Login = () => {
                 </a>
               </label>
             </div>
+            {error && (
+              <label className="block text-red-500 bg-red-100 p-2 rounded-lg text-center mb-6 text-lg font-semibold">
+                {error}
+              </label>
+            )}
             <div className="form-control">
               <button className="btn w-full text-lg font-bold text-white bg-primary">
                 Login
