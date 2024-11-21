@@ -19,9 +19,15 @@
 ## npm packages used in this project :
 
 **1. React-Toastify**
+
 **2. Animate.css**
+
 **3. React Fast Marquee**
+
 **4. React icons**
+
 **5. React-Helmet**
+
 **6. React-simple-typewriter**
+
 **7. SweetAlert2**
