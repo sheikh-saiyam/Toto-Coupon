@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { Typewriter } from "react-simple-typewriter";
 import Swal from "sweetalert2";
@@ -8,7 +8,6 @@ import { toast } from "react-toastify";
 
 const ForgetPassword = () => {
   const { resetPassword, email } = useContext(AuthContext);
-  // const [email, setEmail] = useState();
   const navigate = useNavigate();
   const handleResetPassword = (e) => {
     e.preventDefault();
@@ -38,7 +37,7 @@ const ForgetPassword = () => {
         <title>Login || ToTo-coupon</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <div className="animate__animated animate__bounceInLeft bg-primary  my-12 mx-auto w-11/12 md:w-8/12 py-12 rounded-2xl">
+      <div className="animate__animated animate__bounce bg-primary  my-12 mx-auto w-11/12 md:w-8/12 py-12 rounded-2xl">
         <div>
           <h1 className="text-center mb-6 text-white text-3xl lg:text-4xl font-extrabold drop-shadow-lg lg:leading-[50px] tracking-wide">
             <span>

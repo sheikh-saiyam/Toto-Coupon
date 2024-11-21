@@ -28,7 +28,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="animate__animated animate__bounceInLeft bg-gradient-to-r to-secondary  from-primary my-12 mx-auto w-11/12 md:w-8/12 py-12 rounded-2xl">
+    <div className="animate__animated animate__backInLeft bg-gradient-to-r to-secondary  from-primary my-12 mx-auto w-11/12 md:w-8/12 py-12 rounded-2xl">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Update-Profile || ToTo-coupon</title>

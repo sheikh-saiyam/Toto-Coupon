@@ -8,61 +8,61 @@ import { BiLogOut } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
   const { user, logOut, loading } = useContext(AuthContext);
-  const links = [
-    <>
-      <NavLink
-        to={"/"}
-        key="home"
-        className={({ isActive }) =>
-          isActive
-            ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
-            : "flex gap-1 items-center"
-        }
-      >
-        <IoHomeOutline />
-        Home
-      </NavLink>
+  // const links = [
+  //   <>
+  //     <NavLink
+  //       to={"/"}
+  //       key="home"
+  //       className={({ isActive }) =>
+  //         isActive
+  //           ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+  //           : "flex gap-1 items-center"
+  //       }
+  //     >
+  //       <IoHomeOutline />
+  //       Home
+  //     </NavLink>
 
-      <NavLink
-        to={"/brands"}
-        key="brands"
-        className={({ isActive }) =>
-          isActive
-            ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
-            : "flex gap-1 items-center"
-        }
-      >
-        Brands
-      </NavLink>
+  //     <NavLink
+  //       to={"/brands"}
+  //       key="brands"
+  //       className={({ isActive }) =>
+  //         isActive
+  //           ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+  //           : "flex gap-1 items-center"
+  //       }
+  //     >
+  //       Brands
+  //     </NavLink>
 
-      {user && user.email && (
-        <NavLink
-          to={"/profile"}
-          key="profile"
-          className={({ isActive }) =>
-            isActive
-              ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
-              : "flex gap-1 items-center"
-          }
-        >
-          <CgProfile />
-          My Profile
-        </NavLink>
-      )}
+  //     {user && user.email && (
+  //       <NavLink
+  //         to={"/profile"}
+  //         key="profile"
+  //         className={({ isActive }) =>
+  //           isActive
+  //             ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+  //             : "flex gap-1 items-center"
+  //         }
+  //       >
+  //         <CgProfile />
+  //         My Profile
+  //       </NavLink>
+  //     )}
 
-      <NavLink
-        to={"/about"}
-        key="about"
-        className={({ isActive }) =>
-          isActive
-            ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
-            : "flex gap-1 items-center"
-        }
-      >
-        About Dev
-      </NavLink>
-    </>,
-  ];
+  //     <NavLink
+  //       to={"/about"}
+  //       key="about"
+  //       className={({ isActive }) =>
+  //         isActive
+  //           ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+  //           : "flex gap-1 items-center"
+  //       }
+  //     >
+  //       About Dev
+  //     </NavLink>
+  //   </>,
+  // ];
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -88,7 +88,57 @@ const Navbar = () => {
                 tabIndex={0}
                 className="animate__animated animate__bounceInDown menu w-max dropdown-content bg-base-100 rounded-box z-50 mt-4 p-4 border-2 border-primary space-y-3"
               >
-                <li className="font-semibold">{links}</li>{" "}
+                <NavLink
+                  to={"/"}
+                  key="home"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+                      : "flex gap-1 items-center"
+                  }
+                >
+                  <IoHomeOutline />
+                  Home
+                </NavLink>
+
+                <NavLink
+                  to={"/brands"}
+                  key="brands"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+                      : "flex gap-1 items-center"
+                  }
+                >
+                  Brands
+                </NavLink>
+
+                {user && user.email && (
+                  <NavLink
+                    to={"/profile"}
+                    key="profile"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+                        : "flex gap-1 items-center"
+                    }
+                  >
+                    <CgProfile />
+                    My Profile
+                  </NavLink>
+                )}
+
+                <NavLink
+                  to={"/about"}
+                  key="about"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+                      : "flex gap-1 items-center"
+                  }
+                >
+                  About Dev
+                </NavLink>
                 {user && user?.email && user?.photoURL ? (
                   <div className="md:flex gap-2 items-center">
                     <div className="flex flex-col space-y-2 justify-center">
@@ -135,7 +185,57 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal space-x-10 text-lg  flex items-center animate__animated animate__bounceInDown">
-            {links}
+            <NavLink
+              to={"/"}
+              key="home"
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+                  : "flex gap-1 items-center"
+              }
+            >
+              <IoHomeOutline />
+              Home
+            </NavLink>
+
+            <NavLink
+              to={"/brands"}
+              key="brands"
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+                  : "flex gap-1 items-center"
+              }
+            >
+              Brands
+            </NavLink>
+
+            {user && user.email && (
+              <NavLink
+                to={"/profile"}
+                key="profile"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+                    : "flex gap-1 items-center"
+                }
+              >
+                <CgProfile />
+                My Profile
+              </NavLink>
+            )}
+
+            <NavLink
+              to={"/about"}
+              key="about"
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold underline underline-offset-1 text-primary flex gap-1 items-center py-1 px-2 border-primary border rounded-xl"
+                  : "flex gap-1 items-center"
+              }
+            >
+              About Dev
+            </NavLink>
           </ul>
         </div>
         <div className="navbar-end ">
