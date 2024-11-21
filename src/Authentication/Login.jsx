@@ -160,19 +160,21 @@ const Login = () => {
           </form>
         </div>
         <div className="bg-primary py-12 px-4 md:w-1/2 flex flex-col justify-center items-center text-center">
-          <div className="text-white space-y-2 md:space-y-4">
+          <div className="text-white space-y-2 md:space-y-6">
             <h1 className="font-bold text-3xl md:text-4xl">
               Welcome to Login Page
             </h1>
-            <h3 className="font-semibold text-lg md:text-xl">
-              Don't have an account
-            </h3>
-            <Link
-              to={"/register"}
-              className="bg-transparent border-2 border-white btn btn-wide text-lg font-bold rounded-full text-white"
-            >
-              Register
-            </Link>
+            <div className="w-full flex flex-wrap gap-2 items-center justify-center">
+              <h3 className="font-semibold text-lg md:text-xl">
+                Don't have an account
+              </h3>
+              <Link
+                to={"/register"}
+                className=" bg-transparent border-2  border-white btn w-fit text-lg font-bold rounded-full text-white"
+              >
+                Register
+              </Link>
+            </div>
           </div>
         </div>
       </div>

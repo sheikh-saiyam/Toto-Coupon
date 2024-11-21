@@ -131,7 +131,7 @@ const BrandDetails = () => {
                       </button>
                     </div>{" "}
                     {isCopied && (
-                      <button className="mt-6 tex-lg font-semibold bg-green-100 border border-primary p-2 rounded-xl w-full hover:bg-green-100 hover:border-primary">
+                      <button className="mt-6 text-primary tex-lg font-bold bg-green-100 border border-primary p-2 rounded-xl w-full hover:bg-green-100 hover:border-primary">
                         Coupon Copied
                       </button>
                     )}
@@ -139,7 +139,7 @@ const BrandDetails = () => {
                       <Link
                         to={shop_Link}
                         target="_blank"
-                        className="btn w-full mt-6 border-primary border-2 bg-transparent text-lg font-semibold"
+                        className="btn w-full mt-6 text-primary border-primary border-2 bg-transparent text-lg font-bold"
                       >
                         Use Now
                       </Link>

@@ -7,7 +7,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { BiLogOut } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, loading } = useContext(AuthContext);
   const links = [
     <>
       <NavLink
@@ -86,26 +86,9 @@ const Navbar = () => {
             {isOpen && (
               <ul
                 tabIndex={0}
-                className="menu w-max dropdown-content bg-base-100 rounded-box z-50 mt-4 p-4 border-2 border-primary space-y-3"
+                className="animate__animated animate__bounceInDown menu w-max dropdown-content bg-base-100 rounded-box z-50 mt-4 p-4 border-2 border-primary space-y-3"
               >
                 <li className="font-semibold">{links}</li>{" "}
-                {user && user.email ? (
-                  <button
-                    onClick={logOut}
-                    className="btn bg-primary font-semibold text-lg text-white px-8
-                 items-center gap-2 flex"
-                  >
-                    <BiLogOut />
-                    Log Out
-                  </button>
-                ) : (
-                  <Link
-                    to={"/"}
-                    className="btn bg-primary font-semibold text-lg text-white"
-                  >
-                    Registration
-                  </Link>
-                )}
                 {user && user?.email && user?.photoURL ? (
                   <div className="md:flex gap-2 items-center">
                     <div className="flex flex-col space-y-2 justify-center">
@@ -126,6 +109,23 @@ const Navbar = () => {
                 ) : (
                   ""
                 )}
+                {user && user.email ? (
+                  <button
+                    onClick={logOut}
+                    className="btn bg-primary font-semibold text-lg text-white px-8
+                    items-center gap-2 flex"
+                  >
+                    <BiLogOut />
+                    Log Out
+                  </button>
+                ) : (
+                  <Link
+                    to={"/"}
+                    className="btn bg-primary font-semibold text-lg text-white"
+                  >
+                    Registration
+                  </Link>
+                )}
               </ul>
             )}
           </div>
@@ -134,7 +134,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal space-x-10 text-lg  flex items-center">
+          <ul className="menu menu-horizontal space-x-10 text-lg  flex items-center animate__animated animate__bounceInDown">
             {links}
           </ul>
         </div>
@@ -182,6 +182,8 @@ const Navbar = () => {
                 <BiLogOut />
                 Log Out
               </button>
+            ) : loading ? (
+              <span className="hidden lg:block loading loading-bars loading-lg text-primary"></span>
             ) : (
               <>
                 <Link

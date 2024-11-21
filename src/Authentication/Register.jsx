@@ -201,15 +201,17 @@ const Register = () => {
               <h1 className="font-bold text-3xl md:text-4xl">
                 Welcome to Register Page
               </h1>
-              <p className="font-semibold text-lg md:text-xl">
-                Already have an account
-              </p>
-              <Link
-                to={"/login"}
-                className="bg-transparent border-2 border-white btn w-full lg:btn-wide text-lg font-bold rounded-full text-white"
-              >
-                Login
-              </Link>
+              <div className="w-full flex flex-wrap gap-2 items-center justify-center">
+                <h3 className="font-semibold text-lg md:text-xl">
+                  Already have an account
+                </h3>
+                <Link
+                  to={"/Login"}
+                  className=" bg-transparent border-2  border-white btn w-fit text-lg font-bold rounded-full text-white"
+                >
+                  Login
+                </Link>
+              </div>
             </div>
           </div>
         </div>
