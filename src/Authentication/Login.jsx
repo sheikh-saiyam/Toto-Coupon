@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaGoogle } from "react-icons/fa6";
 import { LuLogIn } from "react-icons/lu";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
 
 const Login = () => {
+
   const navigate = useNavigate();
   const location = useLocation();
   const navigatePath = location.state?.pathname || "/";

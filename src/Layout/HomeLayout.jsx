@@ -11,7 +11,7 @@ const HomeLayout = () => {
   return (
     <div className="w-11/12 mx-auto md:w-10/12 max-w-screen-2xl pt-12 pb-24">
       <Banner></Banner>
-      <TopBrands></TopBrands>
+      <TopBrands coupon={couponData}></TopBrands>
       {/* brands on sale */}
       <div className="pb-24">
         <h1 className="text-4xl font-bold text-center">Brands On Sale</h1>

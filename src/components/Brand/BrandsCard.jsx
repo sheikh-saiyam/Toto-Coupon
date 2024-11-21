@@ -1,7 +1,6 @@
 import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import "animate.css";
-/* eslint-disable react/prop-types */
 const BrandsCard = ({ coupon }) => {
   const { _id, brand_name, rating, description, brand_logo, isSaleOn } = coupon;
   return (
