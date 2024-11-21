@@ -13,7 +13,8 @@ const Login = () => {
   const location = useLocation();
   const navigatePath = location.state?.pathname || "/";
 
-  const { setUser, userLogin, googleLogin } = useContext(AuthContext);
+  const { setUser, userLogin, googleLogin, email, setEmail } =
+    useContext(AuthContext);
   const [error, setError] = useState("");
 
   const handleLogin = (e) => {
@@ -108,6 +109,8 @@ const Login = () => {
               </label>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 name="email"
                 placeholder="Email"
                 className="input input-bordered"
@@ -140,7 +143,7 @@ const Login = () => {
                   to={"/forgetPassword"}
                   className="font-semibold underline link link-hover my-2"
                 >
-                  Forgot password?
+                  Forget password?
                 </Link>
               </label>
             </div>

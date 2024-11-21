@@ -19,6 +19,9 @@ const AuthProvider = ({ children }) => {
   //   for loading state
   const [loading, setLoading] = useState(true);
 
+  // for email sharing login to forget-password
+  const [email , setEmail] = useState("");
+
   // for create a new user / register
   const createNewUser = (email, password) => {
     setLoading(true);
@@ -81,6 +84,7 @@ const AuthProvider = ({ children }) => {
     loading,
     updateUserProfile,
     resetPassword,
+    email, setEmail
   };
 
   return (

@@ -7,8 +7,8 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const ForgetPassword = () => {
-  const { resetPassword } = useContext(AuthContext);
-  const [email, setEmail] = useState();
+  const { resetPassword, email } = useContext(AuthContext);
+  // const [email, setEmail] = useState();
   const navigate = useNavigate();
   const handleResetPassword = (e) => {
     e.preventDefault();
@@ -62,7 +62,6 @@ const ForgetPassword = () => {
               </label>
               <input
                 value={email}
-                onChange={(e) => setEmail(e.currentTarget.value)}
                 type="email"
                 name="email"
                 placeholder="Email"
