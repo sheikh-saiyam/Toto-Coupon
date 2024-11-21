@@ -4,6 +4,7 @@ import {
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -36,6 +37,13 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  // for forget-password
+  const resetPassword = (email) => {
+    return sendPasswordResetEmail(auth, email, {
+      url: "http://localhost:5173/",
+    });
+  };
+
   // for google login
   const provider = new GoogleAuthProvider();
   const googleLogin = () => {
@@ -46,7 +54,7 @@ const AuthProvider = ({ children }) => {
   const updateUserProfile = (updatedData) => {
     return updateProfile(auth.currentUser, updatedData);
   };
-  
+
   // for save the user
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -72,6 +80,7 @@ const AuthProvider = ({ children }) => {
     googleLogin,
     loading,
     updateUserProfile,
+    resetPassword,
   };
 
   return (

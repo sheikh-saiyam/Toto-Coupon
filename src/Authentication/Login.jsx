@@ -15,6 +15,7 @@ const Login = () => {
 
   const { setUser, userLogin, googleLogin } = useContext(AuthContext);
   const [error, setError] = useState("");
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;

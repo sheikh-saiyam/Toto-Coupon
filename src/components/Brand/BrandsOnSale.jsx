@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-
-/* eslint-disable react/prop-types */
 const BrandsOnSale = ({ coupon }) => {
   const { brand_logo, brand_name, coupons, category } = coupon;
   return (

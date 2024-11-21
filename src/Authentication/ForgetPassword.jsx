@@ -1,7 +1,36 @@
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Typewriter } from "react-simple-typewriter";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const ForgetPassword = () => {
+  const { resetPassword } = useContext(AuthContext);
+  const [email, setEmail] = useState();
+  const navigate = useNavigate();
+  const handleResetPassword = (e) => {
+    e.preventDefault();
+    resetPassword(email)
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Password Reset Link Sent! 💌",
+          text: "We've emailed you the link to reset your password. Please check your inbox",
+          showConfirmButton: false,
+          background: "#f0f8ff",
+          color: "#4B0082",
+          timer: 5000,
+        });
+        navigate("/login");
+        // Redirect to Gmail / Open Gmail in a new tab
+        window.open("https://mail.google.com/", "_blank");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
   return (
     <div>
       <Helmet>
@@ -26,12 +55,14 @@ const ForgetPassword = () => {
           </h1>
         </div>
         <div className="mx-auto w-11/12 md:w-7/12 lg:w-5/12 py-12 bg-white px-8 rounded-xl">
-          <form className="card-body p-0 gap-0">
+          <form onSubmit={handleResetPassword} className="card-body p-0 gap-0">
             <div className="form-control">
               <label className="label px-0">
                 <span className="font-semibold">Updated Name</span>
               </label>
               <input
+                value={email}
+                onChange={(e) => setEmail(e.currentTarget.value)}
                 type="email"
                 name="email"
                 placeholder="Email"
