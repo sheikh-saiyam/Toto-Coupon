@@ -24,7 +24,6 @@ const UpdateProfile = () => {
         timer: 2000,
       });
     });
-    console.log({ name, photo });
   };
 
   return (

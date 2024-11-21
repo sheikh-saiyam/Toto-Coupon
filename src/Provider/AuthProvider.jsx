@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
   // for forget-password
   const resetPassword = (email) => {
     return sendPasswordResetEmail(auth, email, {
-      url: "http://localhost:5173/",
+      url: "https://saiyam-assignment9.netlify.app/login",
     });
   };
 

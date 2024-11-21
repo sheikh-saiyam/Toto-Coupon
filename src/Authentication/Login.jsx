@@ -39,7 +39,6 @@ const Login = () => {
         });
       })
       .catch((err) => {
-        console.log(error);
         if (err.message) {
           setError("Incorrect Email Or Password");
         }
@@ -65,7 +64,7 @@ const Login = () => {
         });
       })
       .catch((error) => {
-        console.log(error);
+        setError(error);
       });
   };
 
