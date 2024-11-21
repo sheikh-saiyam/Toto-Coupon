@@ -9,7 +9,13 @@ import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
 
 const Login = () => {
-
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+  
   const navigate = useNavigate();
   const location = useLocation();
   const navigatePath = location.state?.pathname || "/";
