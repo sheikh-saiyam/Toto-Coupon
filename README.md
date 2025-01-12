@@ -1,33 +1,104 @@
-## **Project Name** : ToTo-Coupon
+# ToTo-Coupon - A Coupon Collecting Application 💸
 
-## **Purpose**: ToTo-Coupon is a simple coupon-collecting application developed to help users easily find and use discount coupons for popular e-commerce shops in Bangladesh. It provides users with exclusive discounts and promotional codes .
+**ToTo-Coupon is an intuitive and user-friendly platform designed to help users in Bangladesh find, collect, and utilize discount coupons from top e-commerce shops. With its clean interface and powerful features, users can save time and money while shopping online.**
 
-## **Live link** : https://saiyam-assignment9.netlify.app/
+## 🔗 [Live Website Link](https://saiyam-assignment9.netlify.app/)
 
-## Key features :
 
-**1. Exclusive Coupons: Access a wide range of verified discount coupons for popular e-commerce platforms in Bangladesh.**
+## 🚀 Features
 
-**2. User-Friendly Interface: Intuitive design for effortless browsing and finding the best deals.**
+### 🔑 Authentication
+- **Secure Login & Registration**: Email/Password-based authentication using Firebase.
+- **Google Login**: Quick access via Google account.
+- **Forget Password**: Reset your password with a simple process.
 
-**3. Firebase Authentication: Secure user login and sign up system powered by Firebase for personalized experiences.**
+### 🛒 Coupon Management
+- Browse and explore active coupons with details like discount percentage, expiry date, and terms.
+- Copy coupon codes effortlessly using `react-copy-to-clipboard`.
+- Navigate to brand websites for instant use.
 
-**4. Copy and Use Coupons: Logged-in users can easily copy coupon codes with a single click .**
+### 🌟 Personalized Experience
+- Welcome message with your name after login.
+- Access a private dashboard with profile management.
 
-**5. Mobile Optimization: Responsive design ensures a seamless experience across devices.**
+### 🖌️ UI/UX Highlights
+- Fully responsive design optimized for mobile, tablet, and desktop.
+- Interactive animations using **AOS** or **Animate.css**.
+- Error handling with toast notifications for all key actions.
 
-## npm packages used in this project :
+### Data Highlights
+- JSON-based dynamic mock data with properties like brand name, logo, rating, category, sale status, and coupons.
 
-**1. React-Toastify**
 
-**2. Animate.css**
+## 📄 Pages Overview
 
-**3. React Fast Marquee**
+### 🏠 Home Page (`/`)
+- **Banner**: A static slider with attractive, relevant visuals.
+- **Top Brands**: Brand logos displayed using a smooth marquee with hover effects.
+- **Brands on Sale**: Highlight brands currently offering sales with cards showing details like category and total coupons.
+- **Custom Sections**: Additional user-defined sections for showcasing more content.
 
-**4. React icons**
+### 📋 Brands Page (`/brands`)
+- A searchable and filterable list of all brands displayed as cards.
+- Each card features brand details and dynamic actions like viewing coupons and checking sales.
 
-**5. React-Helmet**
+### 🔐 Authentication System
+- **Login Page**:
+  - Email/password form with validation and error handling.
+  - Google Login option for quick access.
+  - Password reset functionality.
+- **Registration Page**:
+  - Form with fields for Name, Email, Profile Picture URL, and Password.
+  - Real-time password validation (uppercase, lowercase, minimum length).
 
-**6. React-simple-typewriter**
+### 🎟️ Coupon Page (`/brand/:id`) _(Private Route)_
+- Displays brand details such as logo, rating, and active coupons.
+- Coupons are displayed in a grid format, each with:
+  - Coupon description and expiry date.
+  - **Copy Code**: Uses `react-copy-to-clipboard` for copying coupon codes.
+  - **Use Now**: Redirects users to the brand's official site in a new tab.
 
-**7. SweetAlert2**
+### 👤 My Profile (`/my-profile`) _(Private Route)_
+- Stylish profile page displaying user information.
+- Update feature for Name and Profile Picture.
+
+
+## ⚙️ JSON Data Structure
+
+```json
+[
+  {
+    "_id": "1",
+    "brand_name": "Brand",
+    "rating": 4.8,
+    "description": "Top-rated e-commerce platform.",
+    "brand_logo": "logo-url",
+    "shop_Link": "https://brand-x.com",
+    "category": "Fashion",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon-code": "FASHION20",
+        "description": "20% off on all fashion items.",
+        "expiry-date": "2025-01-31",
+        "condition": "No minimum purchase required.",
+        "cupon_type": "Flat"
+      }
+    ]
+  }
+]
+```
+
+
+## 🛠️ Tech Stack  
+- **Frontend**: React.js, Tailwind CSS, Firebase Authentication.  
+- **State Management**: React Context API.  
+- **Hosting**: Netlify.
+
+## 📦 NPM Packages  
+- **React Router**: For dynamic routing.  
+- **React Toastify**: For notifications.  
+- **React Fast Marquee**: For brand logo scrolling.  
+- **React Copy to Clipboard**: For copying coupon codes.  
+- **AOS (Animate on Scroll)**: For animations. 
+
