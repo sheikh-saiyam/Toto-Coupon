@@ -110,13 +110,13 @@
 - **React Copy to Clipboard**: For copying coupon codes.
 - **AOS (Animate on Scroll)**: For animations.
 
-## 📸Home Page (`/`) Image
+<!-- ## 📸Home Page (`/`) Image
 
 ![Project Image](https://i.ibb.co.com/ZKJ4bzw/saiyam-assignment9-netlify-app.png)
 
 ## 📸Brands Page (`/brands`) Image
 
-![Project Image](https://i.ibb.co.com/MZVy1vz/saiyam-assignment9-netlify-app-brands.png)
+![Project Image](https://i.ibb.co.com/MZVy1vz/saiyam-assignment9-netlify-app-brands.png) -->
 
 
 ## ⚙️ Installation & Setup  
