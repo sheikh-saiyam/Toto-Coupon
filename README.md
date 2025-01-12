@@ -117,3 +117,12 @@
 ## 📸 Brands Page (`/brands`) Image
 
 ![Project Image](https://i.ibb.co.com/TmQCQ91/saiyam-assignment9-netlify-app-brands.png)
+
+
+## ⚙️ Installation & Setup  
+
+1. **Clone the repository**:  
+```
+git clone https://github.com/sheikh-saiyam/Toto-Coupon.git
+ cd Toto-Coupon
+```
