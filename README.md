@@ -121,8 +121,28 @@
 
 ## ⚙️ Installation & Setup  
 
-1. **Clone the repository**:  
+**1. Clone the repository**:  
 ```
 git clone https://github.com/sheikh-saiyam/Toto-Coupon.git
- cd Toto-Coupon
+cd Toto-Coupon
+```
+
+**2. Install dependencies:**
+```
+npm install
+```
+
+**3. Set up environment variables in .env.local**
+```
+apiKey: import.meta.env.VITE_apiKey,
+authDomain: import.meta.env.VITE_authDomain,
+projectId: import.meta.env.VITE_projectId,
+storageBucket: import.meta.env.VITE_storageBucket,
+messagingSenderId: import.meta.env.VITE_messagingSenderId,
+appId: import.meta.env.VITE_appId,
+```
+
+**4. Start the development:**
+```
+npm run build
 ```
