@@ -112,11 +112,11 @@
 
 ## 📸 Home Page (`/`) Image
 
-![Project Image](https://i.ibb.co.com/QM3qfXM/saiyam-assignment9-netlify-app.png)
+![Project Image](https://i.ibb.co.com/ZKJ4bzw/saiyam-assignment9-netlify-app.png)
 
 ## 📸 Brands Page (`/brands`) Image
 
-![Project Image](https://i.ibb.co.com/TmQCQ91/saiyam-assignment9-netlify-app-brands.png)
+![Project Image](https://i.ibb.co.com/MZVy1vz/saiyam-assignment9-netlify-app-brands.png)
 
 
 ## ⚙️ Installation & Setup  
